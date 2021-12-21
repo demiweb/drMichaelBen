@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.233" height="27.842" viewBox="0 0 24.233 27.842">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.599" x2="0.5" y2="1.342" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.483" stop-color="#bcbaba"/>
+      <stop offset="0.686" stop-color="#141414" stop-opacity="0.69"/>
+      <stop offset="0.904" stop-color="#f2f2f2"/>
+      <stop offset="1" stop-color="#484848"/>
+    </linearGradient>
+  </defs>
+  <g id="Компонент_17_5" data-name="Компонент 17 – 5" transform="translate(0 27.842) rotate(-90)">
+    <path id="Многоугольник_6" data-name="Многоугольник 6" d="M13.921,0,27.842,24.233H0Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

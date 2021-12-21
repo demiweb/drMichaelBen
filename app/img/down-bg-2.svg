@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.403" height="57.833" viewBox="0 0 59.403 57.833">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-1.282" x2="0.5" y2="2.144" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.254" stop-color="#969696"/>
+      <stop offset="0.374" stop-color="#141414"/>
+      <stop offset="0.42" stop-color="#7d7d7d"/>
+      <stop offset="0.563" stop-color="#dfdfdf"/>
+      <stop offset="0.7" stop-color="#f2f2f2"/>
+      <stop offset="0.838" stop-color="#3e3e3e"/>
+      <stop offset="1" stop-color="gray"/>
+    </linearGradient>
+  </defs>
+  <g id="Компонент_14_3" data-name="Компонент 14 – 3" transform="translate(1.024 0.5)">
+    <g id="Сгруппировать_15" data-name="Сгруппировать 15" transform="translate(1.25 -1)">
+      <path id="Вычитание_1" data-name="Вычитание 1" d="M26.427,35.52,0,0H8.6L26.427,23.958,44.253,0h8.6L26.427,35.52Z" transform="translate(1 1)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Сгруппировать_16" data-name="Сгруппировать 16" transform="translate(0 19.758)">
+      <path id="Вычитание_1-2" data-name="Вычитание 1" d="M28.677,36.762,0,0H9.334L28.677,24.8,48.021,0h9.334L28.677,36.762Z" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+@font-face{
+  font-family: 'asimon';
+  font-weight: 400; /*(regular)*/
+  font-style: normal;
+
+  src: url('../fonts/asimon/almoni-tzar-regular-aaa.woff2') format('woff2'),
+  url('../fonts/asimon/almoni-tzar-regular-aaa.woff') format('woff'),
+  url('../fonts/asimon/almoni-tzar-regular-aaa.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/asimon/almoni-tzar-regular-aaa.ttf') format('truetype');
+}
