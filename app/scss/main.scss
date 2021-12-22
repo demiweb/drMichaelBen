@@ -195,26 +195,26 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
       line-height: 3.3854vw;
       font-weight: normal;
       color: #fff;
-      margin-bottom: 0.5208vw;
+      margin-bottom: 0.6208vw;
       letter-spacing: -0.008em;
     }
 
     span {
       font-weight: 500;
-      font-size: 1.3021vw;
-      line-height: 2.0313vw;
+      font-size: 1.921vw;
+      line-height: 1.8313vw;
       color: #fff;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.038em;
     }
 
     p {
-      font-family: $second-font;
-      font-weight: normal;
+      font-family: $main-font;
+      font-weight: 200;
       font-size: 1.1979vw;
       line-height: 1.5625vw;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.106em;
       color: #fff;
-      margin-bottom: 0.2604vw;
+      margin-bottom: 0;
 
     }
   }
@@ -389,7 +389,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
 
 .check-cont {
   width: 100%;
-  margin-top: 1.3583vw;
+  margin-top: 1.3983vw;
 
   label {
     width: 100%;
@@ -425,15 +425,14 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
 
   span {
     display: inline-block;
-    font-size: 0.8854vw;
+    font-size: 1.09854vw;
     color: #fff;
-    font-family: $second-font;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.5625vw;
     padding-right: 1.7229vw;
     box-sizing: border-box;
     position: relative;
-    letter-spacing: -0.005em;
+    letter-spacing: 0.04em;
 
     &::before {
       position: absolute;
@@ -572,6 +571,7 @@ main {
   display: flex;
   width: 5.3646vw;
   margin-left: 2.2917vw;
+  cursor: pointer;
   &:last-child {
     margin-left: 0;
   }

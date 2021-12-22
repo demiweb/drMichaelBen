@@ -84,7 +84,7 @@ var Visible3 = function (target) {
                 top: window.pageYOffset + 10,
                 left: window.pageXOffset,
                 right: window.pageXOffset + document.documentElement.clientWidth,
-                bottom: window.pageYOffset + document.documentElement.clientHeight - (window.innerHeight / 2.2)
+                bottom: window.pageYOffset + document.documentElement.clientHeight - (window.innerHeight / 2.4)
             };
 
         if (targetPosition.bottom + (window.innerHeight / 5) > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
@@ -280,6 +280,28 @@ function scrollDownBtn() {
 }
 scrollDownBtn();
 
+let fixedLogoMob = [...document.querySelectorAll('.fixed-logo-2')];
+
+function scrollFixedLogo() {
+    if (fixedLogoMob.length) {
+        fixedLogoMob.forEach((logo) => {
+            let img = logo.querySelector('img');
+            let p = logo.querySelector('p');
+            $(p).click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(".fixed-form").offset().top
+                }, 500);
+            });
+            $(img).click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("body").offset().top
+                }, 500);
+            });
+        })
+    }
+}
+scrollFixedLogo();
+
 
 let botSlides = [...document.querySelectorAll('.bot-slides .single-slide')];
 
@@ -297,7 +319,31 @@ function videoControlSlides() {
                 if (videoCont.querySelector('iframe')) {
                     videoCont.querySelector('.video-item').innerHTML = '';
                 }
-                videoCont.click();
+                // videoCont.click();
+                // createVideo(id, id);
+                console.log($(this) + ' this');
+                console.log('clicked');
+                $('.video-block').addClass('play');
+                $('.video-block').find('.block-overlay').fadeOut(300);
+
+                let videoId = id;
+
+                if (!videoId) {
+                    videoId = $('.video-block').data('video-id');
+                }
+
+                if (videoId == undefined) {
+                    $('.video-block').find('video')[0].play();
+                } else{
+                    let videoType = $('.video-block').data('video-type') ? $('.video-block').data('video-type').toLowerCase() : 'youtube';
+
+                    if (videoType == 'youtube') {
+                        $('.video-block').find('.video-item').append('<div class="video-iframe" id="'+videoId+'"></div>');
+                        createVideo(videoId, videoId);
+                    } else if(videoType == 'vimeo'){
+                        $('.video-block').find('.video-item').append('<div class="video-iframe" id="'+videoId+'"><iframe allow="autoplay" class="video-iframe" src="https://player.vimeo.com/video/'+videoId+'?playsinline=1&autoplay=1&transparent=0&app_id=122963"></div>');
+                    }
+                }
             })
         })
     }

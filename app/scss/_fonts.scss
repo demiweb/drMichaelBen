@@ -8,3 +8,20 @@
   url('../fonts/asimon/almoni-tzar-regular-aaa.eot?#iefix') format('embedded-opentype'),
   url('../fonts/asimon/almoni-tzar-regular-aaa.ttf') format('truetype');
 }
+
+@font-face{
+  font-family: 'asimon';
+  font-weight: 300; /*(regular)*/
+  font-style: normal;
+
+  src: url('../fonts/asimon/almoni-tzar-aaa-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/asimon/almoni-tzar-aaa-light.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'asimon';
+  font-weight: 200; /*(regular)*/
+  font-style: normal;
+
+  src: url('../fonts/asimon/almoni-tzar-aaa-extralight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/asimon/almoni-tzar-aaa-extralight.ttf') format('truetype');
+}
