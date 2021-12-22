@@ -192,7 +192,7 @@ jsAnimBlocks2.forEach((el, k) => {
 
     // Video
     $('body').on('click', '.video-block' ,function () {
-        console.log('clicked');
+        // console.log('clicked');
         $(this).addClass('play');
         $(this).find('.block-overlay').fadeOut(300);
 
@@ -311,7 +311,7 @@ function videoControlSlides() {
             let type = btn.dataset.type;
             let id = btn.dataset.vidId;
             let videoCont = document.querySelector('.video-block');
-            console.log(id);
+            // console.log(id);
             btn.addEventListener('click', () => {
                 videoCont.dataset.videoType = type;
                 videoCont.dataset.videoId = id;
@@ -321,8 +321,8 @@ function videoControlSlides() {
                 }
                 // videoCont.click();
                 // createVideo(id, id);
-                console.log($(this) + ' this');
-                console.log('clicked');
+                // console.log($(this) + ' this');
+                // console.log('clicked');
                 $('.video-block').addClass('play');
                 $('.video-block').find('.block-overlay').fadeOut(300);
 
