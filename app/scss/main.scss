@@ -311,12 +311,12 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
     letter-spacing: 0.016em;
   }
 
-  .form {
+  .form, .wpcf7-form {
     margin-top: 1.4104vw;
   }
 }
 
-.form {
+.form, .wpcf7-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -328,6 +328,10 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
   }
 }
 
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+  color: #fff;
+  border-color: #dc3232;
+}
 .input-cont {
   width: 100%;
   display: flex;
@@ -353,8 +357,12 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
     font-size: 1.2500vw;
     font-weight: normal;
     line-height: 1.1;
+    direction: rtl !important;
     color: #888888;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
@@ -518,6 +526,7 @@ main {
   &.visible {
     transform: translate(0, 0);
   }
+
   .btn-sl {
     position: absolute;
     top: 50%;
@@ -648,6 +657,16 @@ main {
   box-sizing: border-box;
   .btn-down {
     display: none;
+  }
+  &.visible {
+    .slides-row {
+      &.visible {
+        transform: translate(0 , 0);
+        &.blocked {
+          transform: translate(100% , 0);
+        }
+      }
+    }
   }
 }
 .row-mobile {

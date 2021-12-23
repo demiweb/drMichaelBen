@@ -84,11 +84,11 @@ var Visible3 = function (target) {
                 top: window.pageYOffset + 10,
                 left: window.pageXOffset,
                 right: window.pageXOffset + document.documentElement.clientWidth,
-                bottom: window.pageYOffset + document.documentElement.clientHeight - (window.innerHeight / 2.4)
+                bottom: window.pageYOffset + document.documentElement.clientHeight - (window.innerHeight / 2.3)
             };
 
         if (targetPosition.bottom + (window.innerHeight / 5) > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-            targetPosition.top + (window.innerHeight / 4.2) <  windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+            targetPosition.top + (window.innerHeight / 3) <  windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
             targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
             targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
             // Если элемент полностью видно, то запускаем следующий код
@@ -157,11 +157,15 @@ var Visible4 = function (target) {
             // console.log(targetPosition.top + ' ...2 ' + windowPosition.bottom + target.classList);
             setTimeout(() => {
                 document.querySelector('.slides-row').classList.add('visible');
+                document.querySelector('.video-sec').classList.add('visible');
+
             }, 60)
 
 
         } else {
             document.querySelector('.slides-row').classList.remove('visible');
+            document.querySelector('.slides-row').classList.remove('blocked');
+            document.querySelector('.video-sec').classList.remove('visible');
         }
     }
     // Все позиции элемента
@@ -216,7 +220,7 @@ jsAnimBlocks2.forEach((el, k) => {
         }
     });
 
-    var player;
+    let player;
 
     function createVideo(videoBlockId, videoId) {
         player = new YT.Player(videoBlockId, {
@@ -287,12 +291,13 @@ function scrollFixedLogo() {
         fixedLogoMob.forEach((logo) => {
             let img = logo.querySelector('img');
             let p = logo.querySelector('p');
-            $(p).click(function() {
+            $(logo).click(function() {
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $(".fixed-form").offset().top
                 }, 500);
             });
-            $(img).click(function() {
+            $(img).click(function(e) {
+                e.stopPropagation();
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $("body").offset().top
                 }, 500);
@@ -348,7 +353,31 @@ function videoControlSlides() {
         })
     }
 }
-videoControlSlides()
+videoControlSlides();
+
+
+let videoBlockB = document.querySelector('.video-sec');
+
+function logoScrollVideo() {
+    if (videoBlockB) {
+        let logoScr = document.querySelector('.fixed-logo');
+        let logoScrA = logoScr.querySelector('a');
+
+        $(logoScr).click(function() {
+
+            document.querySelector('.slides-row').classList.toggle('blocked');
+
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(videoBlockB).offset().top
+            }, 500);
+        });
+        logoScrA.addEventListener('click', (e) => {
+            e.preventDefault();
+        })
+
+    }
+}
+logoScrollVideo();
 
 
 
