@@ -38,8 +38,10 @@ $second-font: 'Assistant', sans-serif;
     input {
       font-size: 6.3889vw;
       line-height: 1.1;
+      border-radius: 0;
+
       height: 8.8889vw;
-      padding: 1.1111vw 3.3333vw;
+      padding: 0.1111vw 3.3333vw;
       box-sizing: border-box;
     }
   }
@@ -160,6 +162,7 @@ $second-font: 'Assistant', sans-serif;
     padding: 0 12.044vw 0 9.4444vw;
     box-sizing: border-box;
     margin-bottom: 28.3333vw;
+
     span {
       font-size: 21px;
       line-height: 31px;
@@ -498,5 +501,15 @@ $second-font: 'Assistant', sans-serif;
   }
   .hero-text .text h2 {
     margin-bottom: 5vw;
+  }
+}
+@media screen and (max-width: 420px) and (min-height: 670px) {
+  .row-mobile {
+    padding-bottom: 1vh;
+  }
+}
+@media screen and (max-width: 390px) and (min-height: 670px) {
+  .row-mobile {
+    padding-bottom: 8vh;
   }
 }

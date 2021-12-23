@@ -232,7 +232,7 @@ jsAnimBlocks2.forEach((el, k) => {
                 'rel': 0,
                 'loop': 1,
                 'playsinline': 1,
-                'fs': 0,
+                'fs': 1,
                 'allowsInlineMediaPlayback': true
             },
             events: {
@@ -313,7 +313,7 @@ let botSlides = [...document.querySelectorAll('.bot-slides .single-slide')];
 function videoControlSlides() {
     if (botSlides.length) {
         botSlides.forEach((btn) => {
-            let type = btn.dataset.type;
+            let type = btn.dataset.videoType;
             let id = btn.dataset.vidId;
             let videoCont = document.querySelector('.video-block');
             // console.log(id);
@@ -324,6 +324,7 @@ function videoControlSlides() {
                 if (videoCont.querySelector('iframe')) {
                     videoCont.querySelector('.video-item').innerHTML = '';
                 }
+
                 // videoCont.click();
                 // createVideo(id, id);
                 // console.log($(this) + ' this');
@@ -365,10 +366,9 @@ function logoScrollVideo() {
 
         $(logoScr).click(function() {
 
-            document.querySelector('.slides-row').classList.toggle('blocked');
 
             $([document.documentElement, document.body]).animate({
-                scrollTop: $(videoBlockB).offset().top
+                scrollTop: $('body').offset().top
             }, 500);
         });
         logoScrA.addEventListener('click', (e) => {

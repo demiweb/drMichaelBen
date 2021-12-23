@@ -332,6 +332,9 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
   color: #fff;
   border-color: #dc3232;
 }
+.wpcf7 form .wpcf7-response-output {
+  color: #fff !important;
+}
 .input-cont {
   width: 100%;
   display: flex;
@@ -363,6 +366,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 0;
   }
 }
 
@@ -404,6 +408,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    cursor: pointer;
 
     &:hover {
       input:checked {
