@@ -90,6 +90,12 @@ $second-font: 'Assistant', sans-serif;
       font-size: 15.1667vw;
       line-height: 11.8889vw;
       margin-bottom: 3.1111vw;
+      span {
+        font-weight: 200;
+        font-size: 15.1667vw;
+        display: inline-block;
+        width: 100%;
+      }
     }
     > span {
       font-size: 6.1111vw;
@@ -163,7 +169,7 @@ $second-font: 'Assistant', sans-serif;
     box-sizing: border-box;
     margin-bottom: 28.3333vw;
 
-    span {
+    > span {
       font-size: 21px;
       line-height: 31px;
       color: #fff;
@@ -195,6 +201,10 @@ $second-font: 'Assistant', sans-serif;
       line-height: 1.1;
       color: #fff;
       letter-spacing: -0.006em;
+      span {
+        font-weight: 200;
+        font-size: 16.6vw;
+      }
     }
   }
   .hero.hero-thanks {
@@ -232,6 +242,9 @@ $second-font: 'Assistant', sans-serif;
         font-size: 19.1667vw;
         line-height: 0.88;
         margin-bottom: 6.4208vw;
+        span {
+          font-weight: 200;
+        }
       }
       p {
         font-size: 6.1111vw;
@@ -242,7 +255,7 @@ $second-font: 'Assistant', sans-serif;
           display: none;
         }
       }
-      span {
+      > span {
         font-size: 6.1111vw;
         line-height: 8.3333vw;
         letter-spacing: 0;
@@ -272,6 +285,9 @@ $second-font: 'Assistant', sans-serif;
       font-size: 15.1667vw;
       line-height: 13.6667vw;
       margin-bottom: 3.7778vw;
+      span {
+        font-weight: 200;
+      }
     }
   }
   .video-block {
@@ -431,6 +447,15 @@ $second-font: 'Assistant', sans-serif;
    }
   }
 }
+@media all and (max-width: 1049px) {
+  .fixed-form__form .form, .fixed-form__form .wpcf7-form {
+    margin-top: 5.5vw;
+  }
+
+  .mob-show{
+    display: block;
+  }
+}
 @media screen and (max-width: 1023px) {
   .mobile-img {
     transform: translate(-57%,-9%);
@@ -469,7 +494,7 @@ $second-font: 'Assistant', sans-serif;
   .fixed-form__form>p {
     font-size: 19.1667vw;
     line-height: 13.8889vw;
-    margin-bottom: 6.1111vw;
+    margin-bottom: 5.1111vw;
   }
 
 }
@@ -503,9 +528,15 @@ $second-font: 'Assistant', sans-serif;
     margin-bottom: 5vw;
   }
 }
+
 @media screen and (max-width: 420px) and (min-height: 670px) {
   .row-mobile {
     padding-bottom: 1vh;
+  }
+}
+@media screen and (max-width: 420px) and (min-height: 815px) {
+  .row-mobile {
+    padding-bottom: 7vh;
   }
 }
 @media screen and (max-width: 390px) and (min-height: 670px) {

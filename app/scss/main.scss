@@ -195,26 +195,27 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
       line-height: 3.3854vw;
       font-weight: normal;
       color: #fff;
-      margin-bottom: 0.6208vw;
+      margin-bottom: 0.5208vw;
       letter-spacing: -0.008em;
     }
 
-    span {
-      font-weight: 500;
-      font-size: 1.921vw;
-      line-height: 1.8313vw;
+    > span {
+      font-weight: 600;
+      font-size: 1.321vw;
+      line-height: 2.0313vw;
       color: #fff;
-      letter-spacing: 0.038em;
+      letter-spacing: 0.016em;
+      font-family: $second-font;
     }
 
     p {
-      font-family: $main-font;
-      font-weight: 200;
+      font-family: $second-font;
+      font-weight: normal;
       font-size: 1.1979vw;
       line-height: 1.5625vw;
-      letter-spacing: 0.106em;
+      letter-spacing:-0.01em;
       color: #fff;
-      margin-bottom: 0;
+      margin-bottom: 0.04vw;
 
     }
   }
@@ -738,7 +739,7 @@ main {
   transition: opacity 0.3s ease;
 
   cursor: pointer;
-  img {
+  img, picture {
     position: absolute;
     top: 0;
     left: 0;
@@ -763,4 +764,14 @@ main {
   margin-bottom: 2.3438vw;
   margin-right: 1.3021vw;
 }
+.fixed-form__form .form, .fixed-form__form .wpcf7-form {
+  margin-top: 0.67vw;
+}
+
+.mob-show{
+  display: none;
+}
+
+
+
 @import "media";
