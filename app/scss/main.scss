@@ -199,7 +199,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
       letter-spacing: -0.008em;
     }
 
-    > span {
+    > span, p > span {
       font-weight: 600;
       font-size: 1.321vw;
       line-height: 2.0313vw;

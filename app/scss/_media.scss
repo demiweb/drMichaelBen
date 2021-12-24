@@ -255,10 +255,11 @@ $second-font: 'Assistant', sans-serif;
           display: none;
         }
       }
-      > span {
+      > span, p > span {
         font-size: 6.1111vw;
         line-height: 8.3333vw;
         letter-spacing: 0;
+        font-weight: 400;
         font-family: $second-font;
       }
     }
@@ -529,18 +530,22 @@ $second-font: 'Assistant', sans-serif;
   }
 }
 
-@media screen and (max-width: 420px) and (min-height: 670px) {
+@media screen and (max-width: 420px) and (min-height: 622px) {
   .row-mobile {
-    padding-bottom: 1vh;
+    //padding-bottom: 1vh;
+    height: calc(((100vh - 135vw) - 19.4vw));
+    padding-bottom: 0;
+    align-items: center;
+    margin-bottom: 24vw;
   }
 }
-@media screen and (max-width: 420px) and (min-height: 815px) {
-  .row-mobile {
-    padding-bottom: 7vh;
-  }
-}
-@media screen and (max-width: 390px) and (min-height: 670px) {
-  .row-mobile {
-    padding-bottom: 8vh;
-  }
-}
+//@media screen and (max-width: 420px) and (min-height: 815px) {
+//  .row-mobile {
+//    padding-bottom: 7vh;
+//  }
+//}
+//@media screen and (max-width: 390px) and (min-height: 670px) {
+//  .row-mobile {
+//    padding-bottom: 8vh;
+//  }
+//}
